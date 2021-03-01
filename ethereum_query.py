@@ -162,11 +162,11 @@ def getMostExpensiveTransaction(blockNum):
 #One of the transactions that occurred on that day had the following hash:
 #0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578
 #Given the above price of Ether in USD, how much was the transaction fee for this transaction (in USD to the nearest cent)?etherPrice = 1385.02
-etherPrice = 1385.02
-transactionCost_wei = getTransactionCost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
-transactionCost_ether = transactionCost_wei/(10**18)
-transactionFee = transactionCost_ether*etherPrice
-print("this is the transaction fee:", transactionFee)
+#etherPrice = 1385.02
+#transactionCost_wei = getTransactionCost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
+#transactionCost_ether = transactionCost_wei/(10**18)
+#transactionFee = transactionCost_ether*etherPrice
+#print("this is the transaction fee:", transactionFee)
 
 
 # In[21]:
@@ -175,39 +175,39 @@ print("this is the transaction fee:", transactionFee)
 #What was the average amount of Ether (to 2 decimal places) that was earned from transaction fees
 #per block in the block range 10237100 to 10237109 (inclusive)?
 
-totalTransactionFee = 0
-numBlock = 10237109-10237100+1
+#totalTransactionFee = 0
+#numBlock = 10237109-10237100+1
 
-for x in range(10237100,10237110,1):
-    totalTransactionFee = totalTransactionFee + getBlockCost(x)
-aveTransactionFee_wei = totalTransactionFee/numBlock
-aveTransactionFee_ether = aveTransactionFee_wei/(10**18)
-print("this is the average ether cost per block:",aveTransactionFee_ether)
+#for x in range(10237100,10237110,1):
+#    totalTransactionFee = totalTransactionFee + getBlockCost(x)
+#aveTransactionFee_wei = totalTransactionFee/numBlock
+#aveTransactionFee_ether = aveTransactionFee_wei/(10**18)
+#print("this is the average ether cost per block:",aveTransactionFee_ether)
     
 
 
 # In[22]:
 
 
-getMostExpensiveTransaction(10237208)
+#getMostExpensiveTransaction(10237208)
 
 
 # In[23]:
 
 
-etherPrice = 248.26
-blockTransactionCost_wei = getBlockCost(10237208)
-print("this is blockTransactionCost_wei :", blockTransactionCost_wei)
-blockCost_ether = blockTransactionCost_wei/(10**18)
-blockReward = 2* etherPrice + blockCost_ether*etherPrice
-print("this is the reward for the block in $",blockReward)
+#etherPrice = 248.26
+#blockTransactionCost_wei = getBlockCost(10237208)
+#print("this is blockTransactionCost_wei :", blockTransactionCost_wei)
+#blockCost_ether = blockTransactionCost_wei/(10**18)
+#blockReward = 2* etherPrice + blockCost_ether*etherPrice
+#print("this is the reward for the block in $",blockReward)
 
 
 # In[ ]:
 
 
-transactionCost_wei = getTransactionCost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
-transactionCost_ether = transactionCost_wei/(10**18)
-blockReward = 2* etherPrice + transactionCost_ether*etherPrice
-blockReward
+#transactionCost_wei = getTransactionCost('0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578')
+#transactionCost_ether = transactionCost_wei/(10**18)
+#blockReward = 2* etherPrice + transactionCost_ether*etherPrice
+#blockReward
 
