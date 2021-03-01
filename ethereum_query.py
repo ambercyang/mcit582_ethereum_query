@@ -146,7 +146,7 @@ def getMostExpensiveTransaction(blockNum):
     for x in range(numTransaction):
         temp = w3.eth.getTransactionByBlock(blockNum, x)
         #temp = w3.eth.get_transaction_by_block(blockNum,x)
-        tempExpense = temp.gas * temp.gasPrice
+        tempExpense = getTransactionCost(temp.hash)
         if tempExpense > maxTransaction:
             maxTransaction = tempExpense
             maxTx = temp.hash    
